@@ -307,7 +307,7 @@ static bool detect_bicluster(std::unique_ptr<Block> &bc,std::vector<std::vector<
 				}
 				}
 			}
-			if (*std::max_element(buck_value.begin(), buck_value.end()) > 0.8)
+			if (*std::max_element(buck_value.begin(), buck_value.end()) > 0.85)
 			{
 				max_index=std::distance(buck_value.begin(), std::max_element(buck_value.begin(), buck_value.end()));
 				max_index=max_index+1;
@@ -520,7 +520,7 @@ static void update_blockcol(std::unique_ptr<Blockbase> &b,std::vector<unsigned c
             break;
 
         /* update colcount,colcand and candidate */
-        int threshold = 8 * (b_size + 1);
+        int threshold = 8.5 * (b_size + 1);
         for (col = 0; col < Mcols; col++)
         {
             colcount[col]=colcount[col]+Marr[max_row][col];
