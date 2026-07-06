@@ -29,8 +29,8 @@ Then you can use it with the following options.
 ## Usage
 
 ```bash
-./TransBic -i filename -o 1
-./TransBic -i filename [argument list]
+./NcBic -i filename -o 1
+./NcBic -i filename [argument list]
 ```
 
 ## Input
